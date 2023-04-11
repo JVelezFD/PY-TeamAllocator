@@ -13,3 +13,16 @@ players = [
 ];
 
 random.shuffle(players);
+
+# Creating First Team
+team1 = players[:len(players)//2];
+
+# Selecting Team 1 captain
+
+print("Team 1 captain: " + random.choice(team1));
+
+print("Team 1:")
+for player in team1:
+    print(player);
+    
+    
