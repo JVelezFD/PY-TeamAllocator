@@ -1,7 +1,7 @@
 # PY-TeamAllocator
 
-# TicTacToe
-This is a simple all time favorite to play Tic Tac Toe.
+# Team Allocator
+This is a simple way to split a list of friends into two teams with captains.
 
 # 💻 Tech Used:
  Python
