@@ -7,5 +7,5 @@ This is a simple app to help create two teams and assign captains.
 
 # How to use this:
 - fork or copy the repo
-- under the variable players you can place all of your names there
+- choose how many players just hand out the numbers so they are aware of their matches
 - run the code to generate two teams with two captains for the event you are going to play
