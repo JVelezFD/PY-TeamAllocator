@@ -2,36 +2,57 @@ import random
 
 print("Welcome to Team Allocator!")
 
-players = [
-    "Martin","Craig","Sue",
-    "Claire", "Dave", "Alice",
-    "Lucianna", "Harry", "Jack",
-    "Rose", "Lexi", "Maria",
-    "Thomas", "James", "William",
-    "Ada", "Grace", "Jean",
-    "Marissa", "Alan",
-];
 
-random.shuffle(players);
+players = []
+number_of_players = int(
+    input(
+        "How many players \
+are there?"
+    )
+)
 
-# Creating First Team
-team1 = players[:len(players)//2];
+for i in range(1, number_of_players + 1):
+    players.append(i)
 
-# Selecting Team 1 captain
 
-print("Team 1 captain: " + random.choice(team1));
+while True:
+    random.shuffle(players)
 
-print("Team 1:")
-for player in team1:
-    print(player);
-    
-# Creating Second Team
-team2 = players[:len(players)//2];
+    response = input(
+        "Ready to setup teams \
+        \nType y or n:"
+    )
 
-# Selecting Team 2 captain
+    if response == "y":
+        # Creating First Team
+        team1 = players[: len(players) // 2]
 
-print("Team 2 captain: " + random.choice(team2));
+    # Selecting Team 1 captain
 
-print("Team 2:")
-for player in team1:
-    print(player);
+    print("\nTeam 1 captain: " + str(random.choice(team1)))
+
+    print("Team 1:")
+    for player in team1:
+        print(player)
+
+    # Creating Second Team
+    team2 = players[: len(players) // 2]
+
+    # Selecting Team 2 captain
+
+    print("\nTeam 2 captain: " + str(random.choice(team2)))
+
+    print("Team 2:")
+
+    for player in team1:
+        print(player)
+        # setup individual player alignment
+    else:
+        for i in range(0, number_of_players, 2):
+            print(str(players[i]) + " vs " + str(players[i + 1]))
+            start = random.randrange(i, i + 2)
+            print(str(players[start]) + "starts")
+
+    response = input("Pick Teams again? Type y or n:")
+    if response == "n":
+        break
