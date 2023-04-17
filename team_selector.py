@@ -47,11 +47,11 @@ while True:
     for player in team1:
         print(player)
         # setup individual player alignment
-    else:
-        for i in range(0, number_of_players, 2):
-            print(str(players[i]) + " vs " + str(players[i + 1]))
-            start = random.randrange(i, i + 2)
-            print(str(players[start]) + "starts")
+    # else:
+    #     for i in range(0, number_of_players, 2):
+    #         print(str(players[i]) + " vs " + str(players[i + 1]))
+    #         start = random.randrange(i, i + 2)
+    #         print(str(players[start]) + "starts")
 
     response = input("Pick Teams again? Type y or n:")
     if response == "n":
